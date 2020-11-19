@@ -51,21 +51,35 @@ body {
     padding: 20px 20px;
 
     &__item {
+      display: flex;
+      align-items: center;
       background-color: $white;
       border-radius: 5px;
-      padding: $itempadding;
       margin-bottom: 20px;
       filter: drop-shadow(0px 5px 5px $grey);
 
       .text {
+        flex-grow: 1;
         font-family: "Roboto", sans-serif;
         font-size: 16px;
         color: $black;
+        padding: $itempadding;
       }
-      .icon {
+      a.icon {
+        font-size: 30px;
+        height: 40px;
+        width: 60px;
+        padding: 5px 15px;
         &--remove {
+          color: $grey;
+
+          &:hover {
+            color: crimson;
+          }
         }
         &--check {
+          border-left: 1px solid $bodybg;
+          color: $green;
         }
       }
     }
