@@ -145,7 +145,52 @@ html {
 }
 
 body {
+  background-color: #eef3f6;
+}
+
+.todoApp {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 28px 16px;
+}
+.todoApp__form {
+  background-color: #19ba99;
+  padding: 20px;
+  border-radius: 10px;
+  filter: drop-shadow(0px 10px 10px #cbd5d2);
+}
+.todoApp__form__input {
   background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 5px 35px 35px 5px;
+  padding: 25px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  width: 100%;
+  color: #fff;
+}
+.todoApp__form__input::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+.todoApp__form__input:focus {
+  outline: none;
+}
+.todoApp__list {
+  padding: 20px 20px;
+}
+.todoApp__list__item {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 25px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0px 5px 5px #cbd5d2);
+}
+.todoApp__list__item .text {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #000;
 }
 
 /*# sourceMappingURL=style.css.map */
