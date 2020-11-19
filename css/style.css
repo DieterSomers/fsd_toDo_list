@@ -139,11 +139,6 @@ table {
   box-sizing: border-box;
 }
 
-html {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-}
-
 body {
   background-color: #eef3f6;
 }
@@ -155,10 +150,12 @@ body {
   padding: 28px 16px;
 }
 .todoApp__form {
+  position: relative;
+  align-items: center;
   background-color: #19ba99;
   padding: 20px;
   border-radius: 10px;
-  filter: drop-shadow(0px 10px 10px #cbd5d2);
+  filter: drop-shadow(0px 10px 5px #cbd5d2);
 }
 .todoApp__form__input {
   background-color: rgba(255, 255, 255, 0.3);
@@ -177,6 +174,20 @@ body {
 .todoApp__form__input:focus {
   outline: none;
 }
+.todoApp__form__button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 40px;
+  text-decoration: none;
+  color: #19ba99;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 14.5px 23.5px;
+}
+.todoApp__form__button:hover {
+  transform: scale(1.1);
+}
 .todoApp__list {
   padding: 20px 20px;
 }
@@ -185,8 +196,12 @@ body {
   align-items: center;
   background-color: #fff;
   border-radius: 5px;
-  margin-bottom: 20px;
-  filter: drop-shadow(0px 5px 5px #cbd5d2);
+  margin-bottom: 15px;
+  filter: drop-shadow(0px 2px 2px #cbd5d2);
+}
+.todoApp__list__item--checked {
+  text-decoration: line-through;
+  text-decoration-color: #19ba99;
 }
 .todoApp__list__item .text {
   flex-grow: 1;
@@ -210,6 +225,9 @@ body {
 .todoApp__list__item a.icon--check {
   border-left: 1px solid #eef3f6;
   color: #19ba99;
+}
+.todoApp__list__item a.icon--check:hover {
+  color: rgba(25, 186, 153, 0.3);
 }
 
 /*# sourceMappingURL=style.css.map */
