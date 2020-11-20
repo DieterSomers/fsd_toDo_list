@@ -11,7 +11,7 @@ body {
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
-  padding: 28px 16px;
+  padding: 15px 15px;
 
   &__form {
     position: relative;
@@ -33,10 +33,15 @@ body {
 
       &::placeholder {
         color: $white;
-        opacity: 1;
+        opacity: 0.8;
       }
+
       &:focus {
         outline: none;
+      }
+
+      &--error {
+        background-color: rgba(crimson, 0.8);
       }
     }
 
@@ -58,9 +63,10 @@ body {
   }
 
   &__list {
-    padding: 20px 20px;
+    padding: 20px;
 
     &__item {
+      position: relative;
       display: flex;
       align-items: center;
       background-color: $white;
@@ -77,29 +83,40 @@ body {
         flex-grow: 1;
         font-family: "Roboto", sans-serif;
         font-size: 16px;
+        margin-right: 120px;
         color: $black;
         padding: $itempadding;
       }
+
       a.icon {
+        position: absolute;
         font-size: 30px;
-        height: 40px;
-        width: 60px;
-        padding: 5px 15px;
+
         &--remove {
+          right: 90px;
           color: $grey;
 
           &:hover {
             color: crimson;
           }
         }
+
         &--check {
-          border-left: 1px solid $bodybg;
+          right: 20px;
           color: $green;
 
           &:hover {
             color: rgba($color: $green, $alpha: 0.3);
           }
         }
+      }
+
+      &::after {
+        position: absolute;
+        right: 70px;
+        height: 40px;
+        content: "";
+        border-left: 1px solid $bodybg;
       }
     }
   }
